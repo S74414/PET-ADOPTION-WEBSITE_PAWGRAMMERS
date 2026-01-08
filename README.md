@@ -1,1 +1,1 @@
-# PetAdoptionWebsite by Pawgrammers
+# PetAdoption Website by Pawgrammers
