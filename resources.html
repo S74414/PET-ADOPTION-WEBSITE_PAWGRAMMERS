@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="Assets/LogoPetAdoption4.png">
+    <title>Resources | Paw & Fur</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top-header">
+        <div class="logo">
+            <img src="Assets/LogoPetAdoption4.png" alt="Company Logo">
+        </div>
+
+        <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="resources.html" class="active">Resources</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <span id="welcomeUser" style="display:none; font-weight:bold;"></span>
+        </nav>
+    </header>
+
+    <!-- Page Title with Slideshow Background -->
+    <section class="page-title resources-page">
+        <div class="slideshow-container">
+            <div class="slide fade active">
+                <img src="Assets/leo.jpeg" alt="Male Black Cat">
+            </div>
+            <div class="slide fade">
+                <img src="Assets/dogcatplaying.jpg" alt="Dog and Cat Playing">
+            </div>
+            <div class="slide fade">
+                <img src="Assets/catdog.jpg" alt="Cat and Dog Hide">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Resources</h1>
+        </div>
+    </section>
+
+    <!-- Resources Container -->
+    <section class="resources-container">
+        <div class="resource-row">
+            <div class="resource-img">
+                <img src="Assets/bunkoarticle.png" alt="Pet Care Article">
+            </div>
+            <div class="resource-info">
+                <h3>Article</h3>
+                <p><strong>Pet Care Tips for New Owners</strong></p>
+                <p>20 tips for taking good care of your pet if you are a first-time pet owner</p>
+                <div class="btn-wrapper">
+                    <a href="https://www.bunko.pet/en/20-tips-for-taking-good-care-of-your-pet-if-you-are-a-first-time-pet-owner-t202509070002.html"
+                        target="_blank" class="card-btn">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="resource-row">
+            <div class="resource-img">
+                <img src="Assets/petfulguide.png" alt="Adoption Guide">
+            </div>
+            <div class="resource-info">
+                <h3>Guide</h3>
+                <p><strong>How to Adopt a Rescue Animal</strong></p>
+                <p>A step-by-step guide explaining the adoption process, requirements, and responsibilities of adopting
+                    a rescue animal.</p>
+                <div class="btn-wrapper">
+                    <a href="https://www.petful.com/animal-welfare/pet-rescue-rules-demystified/" target="_blank"
+                        class="card-btn">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="resource-row">
+            <div class="resource-img">
+                <img src="Assets/NParksSGVideo.png" alt="Ownership Video">
+            </div>
+            <div class="resource-info">
+                <h3>Video</h3>
+                <p><strong>Responsible Pet Ownership</strong></p>
+                <p>Watch this video to understand the importance of providing proper care, training, and a safe
+                    environment for your pets.</p>
+                <div class="btn-wrapper">
+                    <a href="https://www.youtube.com/watch?v=kYaDEyzs3T8" target="_blank" class="card-btn">View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <!-- <section class="content search-area">
+        <div class="search-box-container">
+            <span class="search-label">Search</span>
+            <input type="text" id="searchInput" placeholder="Search resources...">
+            <button onclick="searchResources()" class="search-submit-btn">Search</button>
+            <button onclick="resetResources()" class="search-submit-btn">Reset</button>
+        </div>
+    </section> -->
+
+    <!-- Search Section with FAQ -->
+    <section class="content search-area">
+        <div class="search-box-container">
+            <span class="search-label">Search</span>
+            <input type="text" id="searchInput" placeholder="Search resources...">
+            <button onclick="searchResources()" class="search-submit-btn">Search</button>
+            <button onclick="resetResources()" class="search-submit-btn">Reset</button>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">How can I apply to adopt a pet online?</button>
+                <div class="faq-answer">
+                    <p>You can browse available pets on our website, view their details, and submit an adoption
+                        application directly through the pet’s profile page.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are the pets vaccinated?</button>
+                <div class="faq-answer">
+                    <p>Yes, all pets listed for adoption have received age-appropriate vaccinations and health checks.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I adopt more than one pet?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can adopt multiple pets, depending on compatibility and your home environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p><b>© 2025 PAW &amp; FUR | PAWGRAMMERS</b></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

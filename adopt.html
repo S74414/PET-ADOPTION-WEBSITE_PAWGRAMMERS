@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="Assets/LogoPetAdoption4.png">
+    <title>Adopt A Pet | Paw & Fur</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top-header">
+        <div class="logo">
+            <img src="Assets/LogoPetAdoption4.png" alt="Company Logo">
+        </div>
+
+        <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="adopt.html" class="active">Adopt</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <span id="welcomeUser" style="display:none; font-weight:bold;"></span>
+        </nav>
+    </header>
+
+    <!-- Page Title with Slideshow Background -->
+    <section class="page-title adopt-page">
+        <div class="slideshow-container">
+            <div class="slide fade active">
+                <img src="Assets/leo.jpeg" alt="Male Black Cat">
+            </div>
+            <div class="slide fade">
+                <img src="Assets/dogcatplaying.jpg" alt="Dog and Cat Playing">
+            </div>
+            <div class="slide fade">
+                <img src="Assets/catdog.jpg" alt="Cat and Dog Hide">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Adopt A Pet</h1>
+
+        </div>
+    </section>
+
+    <!-- Main Adopt Section -->
+    <section class="adopt-container">
+
+        <!-- Filter Section -->
+        <aside class="filter-section">
+            <h3>Filter Pets</h3>
+
+            <form id="filterForm">
+                <!-- Pet Type -->
+                <label for="type">Pet Type</label>
+                <select id="type" name="type">
+                    <option value="">Select Type</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
+
+                <!-- Age -->
+                <label for="age">Age</label>
+                <select id="age" name="age">
+                    <option value="">Select Age</option>
+                    <option value="puppy">Puppy / Kitten</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
+                </select>
+
+                <!-- Gender -->
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male"> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                </div>
+
+                <!-- Button -->
+                <button type="submit" class="filter-btn">Apply Filter</button>
+                <button type="reset" class="filter-btn">Reset</button>
+            </form>
+        </aside>
+
+        <div class="pet-list">
+            <div class="pet-card" data-type="dog" data-age="puppy" data-gender="male">
+                <div class="pet-img"><img src="Assets/bruno.png" alt="Bruno"></div>
+                <h3>🐾 Bruno | Puppy | Male</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Bruno</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>3 months</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Mixed Breed</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Vaccinated, Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Kuala Lumpur</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Bruno</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Bruno is an energetic and playful puppy who loves
+                                to run around and explore. He is friendly with people and other pets.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Bruno')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="dog" data-age="puppy" data-gender="female">
+                <div class="pet-img"><img src="Assets/daisy.jpg" alt="Daisy"></div>
+                <h3>🐾 Daisy | Puppy | Female</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Daisy</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>4 months</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Golden Retriever Mix</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Vaccinated, Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Petaling Jaya</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Daisy</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Daisy is a sweet and gentle puppy who enjoys
+                                cuddles and attention. She is easy to train and suitable for first-time owners.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Daisy')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="dog" data-age="adult" data-gender="male">
+                <div class="pet-img"><img src="Assets/LabradorRetriever.jpg" alt="Rocky"></div>
+                <h3>🐾 Rocky | Adult | Male</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Rocky</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>3 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Labrador Retriever</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Neutered, Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Shah Alam</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Rocky</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Rocky is a loyal and well-trained dog who enjoys
+                                daily walks. He is calm, obedient, and great with children.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Rocky')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="dog" data-age="adult" data-gender="female">
+                <div class="pet-img"><img src="Assets/beagle.jpg" alt="Bella"></div>
+                <h3>🐾 Bella | Adult | Female</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Bella</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>4 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Beagle</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Vaccinated, Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Kajang</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Bella</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Bella is a friendly and curious dog who loves
+                                sniffing and exploring. She enjoys companionship and a loving home.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Bella')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="dog" data-age="senior" data-gender="male">
+                <div class="pet-img"><img src="Assets/germanshepherd.jpg" alt="Max"></div>
+                <h3>🐾 Max | Senior | Male</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Max</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>9 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>German Shepherd</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Needs special diet</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Bangsar</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Max</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Max is a calm and protective senior dog. He enjoys
+                                quiet environments and gentle walks.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Max')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="dog" data-age="senior" data-gender="female">
+                <div class="pet-img"><img src="Assets/mixedbreed2.jpg" alt="Luna"></div>
+                <h3>🐾 Luna | Senior | Female</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Luna</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>10 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Mixed Breed</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Calm, Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Subang Jaya</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Luna</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Luna is a loving senior dog who enjoys resting and
+                                human company. She is ideal for families looking for a relaxed pet.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Luna')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="cat" data-age="puppy" data-gender="male">
+                <div class="pet-img"><img src="Assets/kitten.jpeg" alt="Milo"></div>
+                <h3>🐾 Milo | Kitten | Male</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Milo</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>2 months</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Domestic Shorthair</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Vaccinated, Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Kuala Lumpur</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Milo</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Milo is a playful and curious kitten who loves toys
+                                and chasing small objects. He is very active.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Milo')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="cat" data-age="puppy" data-gender="female">
+                <div class="pet-img"><img src="Assets/kitten2.jpg" alt="Lily"></div>
+                <h3>🐾 Lily | Kitten | Female</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Lily</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>3 months</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Domestic Shorthair</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Vaccinated, Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Petaling Jaya</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Lily</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Lily is a shy but affectionate kitten. She enjoys
+                                quiet environments and warms up quickly once safe.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Lily')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="cat" data-age="adult" data-gender="male">
+                <div class="pet-img"><img src="Assets/tabby.jpg" alt="Oliver"></div>
+                <h3>🐾 Oliver | Adult | Male</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Oliver</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>2 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Tabby</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Shah Alam</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Oliver</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Oliver is a relaxed and independent cat who enjoys
+                                lounging around. Suitable for apartment living.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Oliver')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="cat" data-age="adult" data-gender="female">
+                <div class="pet-img"><img src="Assets/calico.jpg" alt="Nala"></div>
+                <h3>🐾 Nala | Adult | Female</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Nala</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>3 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Calico</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Healthy</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Kajang</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Nala</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Nala is gentle and affectionate. She enjoys
+                                attention and is comfortable around other pets.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Nala')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="cat" data-age="senior" data-gender="male">
+                <div class="pet-img"><img src="Assets/DomesticLonghair.jpg" alt="Simba"></div>
+                <h3>🐾 Simba | Senior | Male</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Simba</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>8 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Domestic Longhair</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Needs Gentle Care</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Bangsar</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Simba</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Simba is calm and affectionate. He enjoys a
+                                peaceful environment and gentle affection.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Simba')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+
+            <div class="pet-card" data-type="cat" data-age="senior" data-gender="female">
+                <div class="pet-img"><img src="Assets/persian.jpg" alt="Misty"></div>
+                <h3>🐾 Misty | Senior | Female</h3><br>
+                <button class="card-btn toggle-details">View Details</button>
+                <div class="pet-details">
+                    <table class="details-table">
+                        <tr>
+                            <th>Name</th>
+                            <td>Misty</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>9 years</td>
+                        </tr>
+                        <tr>
+                            <th>Breed</th>
+                            <td>Persian Mix</td>
+                        </tr>
+                        <tr>
+                            <th>Health Condition</th>
+                            <td>Healthy, Calm</td>
+                        </tr>
+                        <tr>
+                            <th>Area to Pickup</th>
+                            <td>Subang Jaya</td>
+                        </tr>
+                        <tr class="description-row">
+                            <th colspan="2">About Misty</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="description-text">Misty is a quiet and loving senior cat who enjoys
+                                relaxing and being pampered.</td>
+                        </tr>
+                    </table>
+                    <button class="apply-btn" onclick="applyAdoption('Misty')">Adopt Me Now 🐾</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <h2>Your New Best Friend Awaits</h2>
+        <p>
+            All pets listed here are vaccinated and ready for adoption.
+            Contact us for more information about the adoption process.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p><b>© 2025 PAW &amp; FUR | PAWGRAMMERS</b></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
